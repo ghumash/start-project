@@ -1,0 +1,49 @@
+{
+  "posts": [
+    {
+      "id": "d021",
+      "title": "xxxxxx",
+      "body": "xcvxcv"
+    },
+    {
+      "id": "eee5",
+      "title": "hhhhhhhhh",
+      "body": "22"
+    },
+    {
+      "id": "5554",
+      "title": "ttttt",
+      "body": "f"
+    },
+    {
+      "id": "2a37",
+      "title": "yyyyy",
+      "body": "xxxxxx"
+    },
+    {
+      "id": "21be",
+      "title": "wwwwwwww",
+      "body": "asdfasdf"
+    },
+    {
+      "id": "0d5f",
+      "title": "aaaaaaa",
+      "body": "aaaaaaa"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": null
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": null
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
