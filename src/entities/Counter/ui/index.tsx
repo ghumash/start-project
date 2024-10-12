@@ -1,4 +1,4 @@
-import { useAppSelector } from '@/shared/hooks'
+import { useAppSelector, useTheme } from '@/shared/hooks'
 import { Button } from '@/shared/ui'
 import { FC, memo } from 'react'
 import { useCounterActions } from '../models/slice/counterSlice'
@@ -6,6 +6,7 @@ import { useCounterActions } from '../models/slice/counterSlice'
 export const Counter: FC = memo(() => {
   const value = useAppSelector((state) => state.counter.value)
   const { decrement, increment, add } = useCounterActions()
+  const { theme } = useTheme()
 
   const handleInc = () => {
     increment()
@@ -20,15 +21,15 @@ export const Counter: FC = memo(() => {
   }
 
   return (
-    <div className={'p-5'}>
-      <div className={'flex items-center justify-center'}>
-        <Button className={'w-1/6'} onClick={handleAddFive}>
+    <div>
+      <div className={'flex items-center justify-between'}>
+        <Button theme={theme} className={'w-1/6'} onClick={handleAddFive}>
           add 5
         </Button>
-        <Button className={'w-1/6 mx-5'} onClick={handleInc}>
+        <Button theme={theme} className={'w-1/6 mx-5'} onClick={handleInc}>
           increment
         </Button>
-        <Button className={'w-1/6'} onClick={handleDec}>
+        <Button theme={theme} className={'w-1/6'} onClick={handleDec}>
           decrement
         </Button>
       </div>

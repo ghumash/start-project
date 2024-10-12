@@ -1,6 +1,7 @@
 import { ButtonColor, IPost } from '@/shared/types'
 import { Button } from '@/shared/ui'
 import { FC, memo } from 'react'
+import { Link } from 'react-router-dom'
 
 interface PostItemProps {
   post: IPost
@@ -28,7 +29,7 @@ export const Post: FC<PostItemProps> = memo((props) => {
   return (
     <div className={'flex justify-between items-center my-2 pl-5 rounded-full border border-gray-300'}>
       <span>
-        {post.id}. {post.title}
+        {post.id}. <Link to={`/posts/${post.id}`}>{post.title}</Link>
       </span>
       <div>
         <Button color={ButtonColor.SUCCESS} onClick={handleUpdate}>

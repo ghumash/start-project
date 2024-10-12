@@ -17,6 +17,13 @@ export const postAPI = createApi({
       providesTags: () => ['Post'],
     }),
 
+    fetchSinglePost: build.query<IPost, string>({
+      query: (id) => ({
+        url: `/posts/${id}`,
+      }),
+      providesTags: () => ['Post'],
+    }),
+
     createPost: build.mutation<IPost, IPost>({
       query: (post) => ({
         url: `/posts`,
@@ -46,4 +53,10 @@ export const postAPI = createApi({
   }),
 })
 
-export const { useFetchAllPostsQuery, useCreatePostMutation, useDeletePostMutation, useUpdatePostMutation } = postAPI
+export const {
+  useFetchAllPostsQuery,
+  useFetchSinglePostQuery,
+  useCreatePostMutation,
+  useDeletePostMutation,
+  useUpdatePostMutation,
+} = postAPI
