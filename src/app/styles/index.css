@@ -1,0 +1,29 @@
+@import "./reset.css";
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+:root {
+    /* Light */
+    --bg-primary-color-light: #fff;
+    --bg-secondary-color-light: #f1f1f1;
+    --bg-tertiary-color-light: #ccc;
+
+    --text-primary-color-light: #fff;
+    --text-secondary-color-light: #f1f1f1;
+    --text-tertiary-color-light: #ccc;
+
+    /* Dark */
+    --bg-primary-color-dark: #111;
+    --bg-secondary-color-dark: #333;
+    --bg-tertiary-color-dark: #555;
+
+    --text-primary-color-dark: #111;
+    --text-secondary-color-dark: #333;
+    --text-tertiary-color-dark: #555;
+}

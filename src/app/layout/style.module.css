@@ -1,0 +1,11 @@
+.root {
+    padding: 2rem 10rem;
+
+    background: var(--bg-primary-color-light);
+}
+
+@media (prefers-color-scheme: dark) {
+    .root {
+        background-color: var(--bg-primary-color-dark);
+    }
+}
