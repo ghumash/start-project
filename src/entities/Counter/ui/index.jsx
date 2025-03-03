@@ -22,19 +22,11 @@ export const Counter = memo(() => {
   return (
     <>
       <div>
-        <Button disabled={true}>add 5</Button>
-        <Button onClick={handleAddFive}>
-          add 5
-        </Button>
-        <Button onClick={handleInc}>
-          increment
-        </Button>
-        <Button onClick={handleDec}>
-          decrement
-        </Button>
-        <Button isLoading={true}>add 5</Button>
+        <Button onClick={handleAddFive}>add 5</Button>
+        <Button onClick={handleInc}>increment</Button>
+        <Button onClick={handleDec}>decrement</Button>
       </div>
-      <h3>{value}</h3>
+      <h2>{value}</h2>
     </>
   )
 })

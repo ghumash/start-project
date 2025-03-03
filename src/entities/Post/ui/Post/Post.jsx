@@ -1,25 +1,18 @@
 import { Button } from '@/shared/ui'
-import { memo } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './style.module.css'
 
-export const Post = memo((props) => {
+export const Post = (props) => {
   const { post, remove, update } = props
 
   const handleRemove = () => {
-    const confirmed = confirm('Are you sure?') || false
+    const confirmed = confirm('Are you sure?')
     if (confirmed) remove(post)
   }
 
   const handleUpdate = () => {
     const title = prompt(`Update post title "${post.title}"`)
-
-    if(title) {
-      update({
-        ...post,
-        title,
-      })
-    }
+    if (title) update({ ...post, title })
   }
 
   return (
@@ -37,4 +30,4 @@ export const Post = memo((props) => {
       </div>
     </div>
   )
-})
+}
