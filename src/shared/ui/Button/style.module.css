@@ -1,50 +1,71 @@
 .button {
+    height: 2.5rem;
+    min-width: 6rem;
+    padding: 0.75rem 1.5rem;
+
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0.75rem 1.5rem;
 
     font-size: 1rem;
-    font-weight: 600;
-    color: var(--text-primary-color-dark);
+    color: var(--text-tertiary-color-dark);
+
+    background: var(--bg-secondary-color-light);
 
     border: none;
     cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
 
-    transition: background 0.2s;
+    &:hover {
+        background: var(--bg-secondary-color-dark);
+        color: var(--text-secondary-color-light);
+        box-shadow: 0 0 .4rem var(--bg-secondary-color-dark);
+    }
 
-    background: var(--bg-primary-color-dark);
-
-    &:hover { background: var(--bg-primary-color-dark) }
-    &:active { background: var(--bg-secondary-color-dark) }
-
-    @media (prefers-color-scheme: dark) {
-        background: var(--border-color);
-        color: var(--text-primary-color-dark);
-
-        &:hover { background: var(--bg-primary-color-dark) }
-        &:active { background: var(--bg-secondary-color-dark) }
+    &:active {
+        background: var(--bg-primary-color-dark);
+        color: var(--text-primary-color-light);
     }
 
     &:disabled {
         opacity: 0.5;
         cursor: not-allowed;
+        &:hover, &:active {
+            color: var(--text-tertiary-color-dark);
+            background: var(--bg-secondary-color-light);
+            box-shadow: none;
+        }
     }
 
-    @media (max-width: 768px) { padding: 0.5rem 1rem; font-size: 0.9rem }
-    @media (max-width: 480px) { padding: 0.4rem 0.8rem; font-size: 0.85rem }
-}
+    @media (prefers-color-scheme: dark) {
+        background: var(--bg-secondary-color-dark);
+        color: var(--text-tertiary-color-light);
 
-/* Спиннер */
-.spinner {
-    width: 1.25rem;
-    height: 1.25rem;
-    border: 3px solid currentColor;
-    border-radius: 50%;
-    border-top-color: transparent;
-    animation: spin 1s linear infinite;
-}
+        &:hover {
+            background: var(--bg-secondary-color-light);
+            color: var(--text-secondary-color-dark);
+            box-shadow: 0 0 .4rem var(--bg-secondary-color-light);
+        }
 
-@keyframes spin {
-    to { transform: rotate(360deg); }
+        &:active {
+            background: var(--bg-primary-color-light);
+            color: var(--text-primary-color-dark);
+        }
+
+        &:disabled {
+            &:hover, &:active {
+                color: var(--text-tertiary-color-light);
+                background: var(--bg-secondary-color-dark);
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem
+    }
+    @media (max-width: 480px) {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem
+    }
 }

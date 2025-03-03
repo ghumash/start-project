@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    color: var(--text-tertiary-color-dark);
+}
+
+.title {
+    font-size: 6rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.text {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}

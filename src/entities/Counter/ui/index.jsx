@@ -1,10 +1,10 @@
-import { useAppSelector } from '@/shared/hooks'
 import { Button } from '@/shared/ui'
 import { memo } from 'react'
 import { useCounterActions } from '../models/slice/counterSlice'
+import { useSelector } from 'react-redux'
 
 export const Counter = memo(() => {
-  const value = useAppSelector((state) => state.counter.value)
+  const value = useSelector((state) => state.counter.value)
   const { decrement, increment, add } = useCounterActions()
 
   const handleInc = () => {
@@ -20,22 +20,21 @@ export const Counter = memo(() => {
   }
 
   return (
-    <div>
-      <div className={'flex items-center justify-between'}>
-        <Button isLoading={true}>add 5</Button>
+    <>
+      <div>
         <Button disabled={true}>add 5</Button>
-
-        <Button className={'w-1/6'} onClick={handleAddFive}>
+        <Button onClick={handleAddFive}>
           add 5
         </Button>
-        <Button className={'w-1/6 mx-5'} onClick={handleInc}>
+        <Button onClick={handleInc}>
           increment
         </Button>
-        <Button className={'w-1/6'} onClick={handleDec}>
+        <Button onClick={handleDec}>
           decrement
         </Button>
+        <Button isLoading={true}>add 5</Button>
       </div>
-      <div className={'flex justify-center items-center my-5'}>{value}</div>
-    </div>
+      <h3>{value}</h3>
+    </>
   )
 })

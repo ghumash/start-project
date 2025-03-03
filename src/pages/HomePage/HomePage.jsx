@@ -1,13 +1,9 @@
-import { Counter } from '@/entities/Counter'
+import styles from './style.module.css'
 
 const HomePage = () => {
   return (
     <>
-      <Counter />
-      <p className={'text-light-primary'}>asdf 1</p>
-      <p className={'text-light-primaryInverted'}>asdf 2</p>
-      <p className={'text-dark-primary'}>asdf 3</p>
-      <p className={'text-dark-primaryInverted'}>asdf 4</p>
+      <h1 className={styles.title}>Home Page</h1>
     </>
   )
 }

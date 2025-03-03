@@ -2,7 +2,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { routes } from '@/app/routes'
 import styles from './style.module.css'
 
-const Navbar = () => {
+export const Navbar = () => {
   const location = useLocation()
 
   return (
@@ -27,5 +27,3 @@ const Navbar = () => {
     </nav>
   )
 }
-
-export default Navbar
