@@ -1,81 +1,83 @@
 .footer {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    background: var(--bg-secondary-color-light);
-    color: var(--text-tertiary-color-dark);
-    padding: 1.5rem 10rem;
+  background: var(--bg-secondary-color-light);
+  color: var(--text-tertiary-color-dark);
+  padding: 1.5rem 10rem;
 
-    text-align: center;
-    transition: background-color 0.2s, color 0.2s;
+  text-align: center;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
 }
 
 .footer p {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .socialLinks {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    list-style: none;
-    padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
 }
 
 .socialLinks a {
-    text-decoration: none;
-    color: var(--text-tertiary-color-dark);
-    font-weight: bold;
-    transition: color 0.2s;
+  text-decoration: none;
+  color: var(--text-tertiary-color-dark);
+  font-weight: bold;
+  transition: color 0.2s;
 }
 
 .socialLinks a:hover {
-    color: var(--text-secondary-color-dark);
+  color: var(--text-secondary-color-dark);
 }
 
 .socialLinks a:active {
-    color: var(--text-primary-color-dark);
+  color: var(--text-primary-color-dark);
 }
 
 @media (prefers-color-scheme: dark) {
-    .footer {
-        background-color: var(--bg-secondary-color-dark);
-        color: var(--text-tertiary-color-light);
-    }
+  .footer {
+    background-color: var(--bg-secondary-color-dark);
+    color: var(--text-tertiary-color-light);
+  }
 
-    .socialLinks a {
-        color: var(--text-tertiary-color-light);
-    }
+  .socialLinks a {
+    color: var(--text-tertiary-color-light);
+  }
 
-    .socialLinks a:hover {
-        color: var(--text-secondary-color-light);
-    }
+  .socialLinks a:hover {
+    color: var(--text-secondary-color-light);
+  }
 
-    .socialLinks a:active {
-        color: var(--text-primary-color-light);
-    }
+  .socialLinks a:active {
+    color: var(--text-primary-color-light);
+  }
 }
 
 @media (max-width: 768px) {
-    .footer {
-        padding: 1.5rem;
-    }
+  .footer {
+    padding: 1.5rem;
+  }
 
-    .socialLinks {
-        flex-direction: column;
-    }
+  .socialLinks {
+    flex-direction: column;
+  }
 
-    .socialLinks a {
-        font-size: 1.1rem;
-    }
+  .socialLinks a {
+    font-size: 1.1rem;
+  }
 }
 
 @media (max-width: 480px) {
-    .footer {
-        padding: 1rem;
-    }
+  .footer {
+    padding: 1rem;
+  }
 
-    .socialLinks a {
-        font-size: 1rem;
-    }
+  .socialLinks a {
+    font-size: 1rem;
+  }
 }

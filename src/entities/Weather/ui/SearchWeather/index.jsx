@@ -23,7 +23,9 @@ export const SearchWeather = ({
         <Button onClick={onSubmit} isLoading={isLoading}>
           Search
         </Button>
-        {isSearchError && <p className={styles.error}>{searchError?.data?.message}</p>}
+        {isSearchError && (
+          <p className={styles.error}>{searchError?.data?.message}</p>
+        )}
       </div>
     </div>
   )

@@ -1,41 +1,41 @@
 .toTop {
-    min-width: 2rem;
-    height: 2rem;
-    padding: 0;
+  min-width: 2rem;
+  height: 2rem;
+  padding: 0;
 
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
 
-    color: var(--text-primary-color-light);
-    font-size: 1rem;
+  color: var(--text-primary-color-light);
+  font-size: 1rem;
 
-    background-color: var(--bg-tertiary-color-dark);
-    cursor: pointer;
-    transition: background 0.2s, transform 0.2s;
+  background-color: var(--bg-tertiary-color-dark);
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+
+  &:hover {
+    background-color: var(--bg-primary-color-dark);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .toTop {
+    background-color: var(--bg-tertiary-color-light);
+    color: var(--text-primary-color-dark);
 
     &:hover {
-        background-color: var(--bg-primary-color-dark);
+      background-color: var(--bg-primary-color-light);
     }
 
     &:active {
-        transform: scale(0.95);
+      transform: scale(0.95);
     }
-}
-
-
-
-@media (prefers-color-scheme: dark) {
-    .toTop {
-        background-color: var(--bg-tertiary-color-light);
-        color: var(--text-primary-color-dark);
-
-        &:hover {
-            background-color: var(--bg-primary-color-light);
-        }
-
-        &:active {
-            transform: scale(0.95);
-        }
-    }
+  }
 }

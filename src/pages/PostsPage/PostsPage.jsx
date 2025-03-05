@@ -43,7 +43,12 @@ const PostsPage = () => {
 
         <div>
           {posts?.map((post) => (
-            <Post update={handleUpdate} remove={handleRemove} key={post.id} post={post} />
+            <Post
+              update={handleUpdate}
+              remove={handleRemove}
+              key={post.id}
+              post={post}
+            />
           ))}
         </div>
       </div>

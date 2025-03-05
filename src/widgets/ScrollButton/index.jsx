@@ -16,11 +16,9 @@ export const ScrollButton = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const onClick = () => window.scrollTo({ top: 0  })
+  const onClick = () => window.scrollTo({ top: 0 })
 
-  if(!showButton) return null
+  if (!showButton) return null
 
-  return (
-    <Button className={styles.toTop} text="⬆" onClick={onClick} />
-  )
+  return <Button className={styles.toTop} text="⬆" onClick={onClick} />
 }

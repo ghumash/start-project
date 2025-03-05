@@ -14,7 +14,7 @@
 
   &:not(.activeDay):hover {
     background: var(--bg-secondary-color-light);
-    box-shadow: 0 0 .2rem var(--bg-tertiary-color-light);
+    box-shadow: 0 0 0.2rem var(--bg-tertiary-color-light);
   }
 }
 
@@ -26,8 +26,11 @@
 .activeDay {
   background: var(--bg-primary-color-dark);
   color: var(--text-primary-color-light);
-  box-shadow: 0 0 .2rem var(--bg-tertiary-color-light);
-  transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 0 0.2rem var(--bg-tertiary-color-light);
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -36,14 +39,14 @@
 
     &:not(.activeDay):hover {
       background: var(--bg-secondary-color-dark);
-      box-shadow: 0 0 .2rem var(--bg-tertiary-color-dark);
+      box-shadow: 0 0 0.2rem var(--bg-tertiary-color-dark);
     }
   }
 
   .activeDay {
     background: var(--bg-primary-color-light);
     color: var(--text-primary-color-dark);
-    box-shadow: 0 0 .2rem var(--bg-tertiary-color-dark);
+    box-shadow: 0 0 0.2rem var(--bg-tertiary-color-dark);
   }
 }
 
@@ -68,6 +71,3 @@
 .div12 {
   grid-row-start: 7;
 }
-
-
-

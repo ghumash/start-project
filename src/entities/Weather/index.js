@@ -7,10 +7,10 @@ import { Weather } from './ui/Weather'
 import {
   weatherAPI,
   useSearchCityMutation,
-  useGetForecastWeatherMutation
+  useGetForecastWeatherMutation,
 } from './model/services/weather.api'
 
-import { useWeather }  from './model/hooks/useWeather'
+import { useWeather } from './model/hooks/useWeather'
 
 export {
   SearchWeather,
@@ -21,5 +21,5 @@ export {
   WeatherDetails,
   HourlyWeatherForecast,
   DailyWeatherForecast,
-  Weather
+  Weather,
 }

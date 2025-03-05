@@ -34,4 +34,5 @@ export const weatherAPI = createApi({
   }),
 })
 
-export const { useSearchCityMutation, useGetForecastWeatherMutation} = weatherAPI
+export const { useSearchCityMutation, useGetForecastWeatherMutation } =
+  weatherAPI

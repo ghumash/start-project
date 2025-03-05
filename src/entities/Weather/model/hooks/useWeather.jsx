@@ -1,34 +1,41 @@
 import { useEffect, useState } from 'react'
-import { useGetForecastWeatherMutation, useSearchCityMutation } from '@/entities/Weather'
+import {
+  useGetForecastWeatherMutation,
+  useSearchCityMutation,
+} from '@/entities/Weather'
 
 export const useWeather = () => {
   const [search, setSearch] = useState('')
   const [units, setUnits] = useState('metric')
   const [currentDay, setCurrentDay] = useState(null)
 
-  const [getForecast, {
+  const [
+    getForecast,
+    {
       isError: isForecastError,
       isLoading: isForecastLoading,
-      data: forecastData
-    }] = useGetForecastWeatherMutation()
+      data: forecastData,
+    },
+  ] = useGetForecastWeatherMutation()
 
-  const [searchCity, {
-    isError: isSearchError,
-    isLoading: isSearchLoading,
-    data: searchData,
-    error: searchError
-  }] = useSearchCityMutation()
+  const [
+    searchCity,
+    {
+      isError: isSearchError,
+      isLoading: isSearchLoading,
+      data: searchData,
+      error: searchError,
+    },
+  ] = useSearchCityMutation()
 
   const isLoading = isForecastLoading || isSearchLoading
 
   useEffect(() => {
-
     const city = search.trim() || currentDay?.name || 'Vanadzor'
     getForecast({ units, search: city })
-    searchCity({ units, search: city })
-      .then(({ data }) => {
-        setCurrentDay(data)
-      })
+    searchCity({ units, search: city }).then(({ data }) => {
+      setCurrentDay(data)
+    })
   }, [units])
 
   const handleSearchChange = (e) => setSearch(e.target.value)
@@ -51,7 +58,7 @@ export const useWeather = () => {
     setCurrentDay({
       ...day,
       name: day.name ? day.name : searchData?.name,
-      sys: day.sys ? day.sys :{ country: searchData.sys.country },
+      sys: day.sys ? day.sys : { country: searchData.sys.country },
     })
   }
 
@@ -65,7 +72,6 @@ export const useWeather = () => {
       minute: '2-digit',
     })
   }
-
 
   return {
     search,
@@ -82,6 +88,6 @@ export const useWeather = () => {
     toggleUnits,
     formatTime,
     handleClickDay,
-    onSubmit
+    onSubmit,
   }
 }

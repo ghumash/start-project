@@ -1,58 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
-@import "./reset.css";
+@import './reset.css';
 
 html {
-    font-size: 16px;
-    scroll-behavior: smooth;
+  font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: "JetBrains Mono", monospace;
-    font-size: 1rem;
-    color: var(--text-primary-color-dark);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1rem;
+  color: var(--text-primary-color-dark);
 }
 
 button {
-    font: inherit;
-    border: none;
+  font: inherit;
+  border: none;
 }
 
 :root {
-    /* Light */
-    --bg-primary-color-light: #fff;
-    --bg-secondary-color-light: #f1f1f1;
-    --bg-tertiary-color-light: #ccc;
+  /* Light */
+  --bg-primary-color-light: #fff;
+  --bg-secondary-color-light: #f1f1f1;
+  --bg-tertiary-color-light: #ccc;
 
-    --text-primary-color-light: #fff;
-    --text-secondary-color-light: #f1f1f1;
-    --text-tertiary-color-light: #ccc;
+  --text-primary-color-light: #fff;
+  --text-secondary-color-light: #f1f1f1;
+  --text-tertiary-color-light: #ccc;
 
-    /* Dark */
-    --bg-primary-color-dark: #111;
-    --bg-secondary-color-dark: #333;
-    --bg-tertiary-color-dark: #555;
+  /* Dark */
+  --bg-primary-color-dark: #111;
+  --bg-secondary-color-dark: #333;
+  --bg-tertiary-color-dark: #555;
 
-    --text-primary-color-dark: #111;
-    --text-secondary-color-dark: #333;
-    --text-tertiary-color-dark: #555;
+  --text-primary-color-dark: #111;
+  --text-secondary-color-dark: #333;
+  --text-tertiary-color-dark: #555;
 }
 
 @media (prefers-color-scheme: dark) {
-    body {
-        color: var(--text-primary-color-light);
-    }
+  body {
+    color: var(--text-primary-color-light);
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

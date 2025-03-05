@@ -1,73 +1,80 @@
 .button {
-    height: 2.5rem;
-    min-width: 6rem;
-    padding: 0.75rem 1.5rem;
+  height: 2.5rem;
+  min-width: 6rem;
+  padding: 0.75rem 1.5rem;
 
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
-    font-size: 1rem;
-    color: var(--text-tertiary-color-dark);
+  font-size: 1rem;
+  color: var(--text-tertiary-color-dark);
 
-    background: var(--bg-secondary-color-light);
+  background: var(--bg-secondary-color-light);
 
-    border: none;
-    cursor: pointer;
-    transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+  border: none;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
+
+  &:hover {
+    background: var(--bg-secondary-color-dark);
+    color: var(--text-secondary-color-light);
+    box-shadow: 0 0 0.2rem var(--bg-tertiary-color-dark);
+  }
+
+  &:active,
+  &:focus {
+    background: var(--bg-primary-color-dark);
+    color: var(--text-primary-color-light);
+    outline: none;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+
+    &:hover,
+    &:active {
+      color: var(--text-tertiary-color-dark);
+      background: var(--bg-secondary-color-light);
+      box-shadow: none;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background: var(--bg-secondary-color-dark);
+    color: var(--text-tertiary-color-light);
 
     &:hover {
-        background: var(--bg-secondary-color-dark);
-        color: var(--text-secondary-color-light);
-        box-shadow: 0 0 .2rem var(--bg-tertiary-color-dark);
+      background: var(--bg-secondary-color-light);
+      color: var(--text-secondary-color-dark);
+      box-shadow: 0 0 0.2rem var(--bg-tertiary-color-light);
     }
 
-    &:active, &:focus {
-        background: var(--bg-primary-color-dark);
-        color: var(--text-primary-color-light);
-        outline: none;
+    &:active,
+    &:focus {
+      background: var(--bg-primary-color-light);
+      color: var(--text-primary-color-dark);
     }
 
     &:disabled {
-        opacity: 0.5;
-        cursor: not-allowed;
-
-        &:hover, &:active {
-            color: var(--text-tertiary-color-dark);
-            background: var(--bg-secondary-color-light);
-            box-shadow: none;
-        }
-    }
-
-    @media (prefers-color-scheme: dark) {
-        background: var(--bg-secondary-color-dark);
+      &:hover,
+      &:active {
         color: var(--text-tertiary-color-light);
-
-        &:hover {
-            background: var(--bg-secondary-color-light);
-            color: var(--text-secondary-color-dark);
-            box-shadow: 0 0 .2rem var(--bg-tertiary-color-light);
-        }
-
-        &:active, &:focus {
-            background: var(--bg-primary-color-light);
-            color: var(--text-primary-color-dark);
-        }
-
-        &:disabled {
-            &:hover, &:active {
-                color: var(--text-tertiary-color-light);
-                background: var(--bg-secondary-color-dark);
-            }
-        }
+        background: var(--bg-secondary-color-dark);
+      }
     }
+  }
 
-    @media (max-width: 768px) {
-        padding: 0.5rem 1rem;
-        font-size: 0.9rem
-    }
-    @media (max-width: 480px) {
-        padding: 0.4rem 0.8rem;
-        font-size: 0.85rem
-    }
+  @media (max-width: 768px) {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+  @media (max-width: 480px) {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
 }

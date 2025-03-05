@@ -1,85 +1,85 @@
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    width: 100%;
-    padding: 0 10rem;
+  width: 100%;
+  padding: 0 10rem;
 
-    background-color: var(--bg-secondary-color-light);
-    transition: background-color 0.3s;
+  background-color: var(--bg-secondary-color-light);
+  transition: background-color 0.3s;
 }
 
 .logo {
-    font-weight: bold;
-    font-size: 1.25rem;
-    color: var(--text-tertiary-color-dark);
-    transition: color 0.3s;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: var(--text-tertiary-color-dark);
+  transition: color 0.3s;
 }
 
 .logo:hover {
-    color: var(--text-secondary-color-dark);
+  color: var(--text-secondary-color-dark);
 }
 
 .logo:active {
-    color: var(--text-primary-color-dark);
+  color: var(--text-primary-color-dark);
 }
 
 .navLinks {
-    display: flex;
-    gap: 1.5rem;
+  display: flex;
+  gap: 1.5rem;
 }
 
 .navLink {
-    font-size: 0.875rem;
-    color: var(--text-tertiary-color-dark);
-    transition: color 0.3s;
+  font-size: 0.875rem;
+  color: var(--text-tertiary-color-dark);
+  transition: color 0.3s;
 
-    padding: 1.5rem 0;
+  padding: 1.5rem 0;
 }
 
 .navLink:hover {
-    color: var(--text-secondary-color-dark);
+  color: var(--text-secondary-color-dark);
 }
 
 .navLink:active {
-    color: var(--text-primary-color-dark);
+  color: var(--text-primary-color-dark);
 }
 
 .navLinkActive {
-    color: var(--text-primary-color-dark);
+  color: var(--text-primary-color-dark);
 }
 
 @media (prefers-color-scheme: dark) {
-    .navbar {
-        background-color: var(--bg-secondary-color-dark);
-    }
+  .navbar {
+    background-color: var(--bg-secondary-color-dark);
+  }
 
-    .logo {
-        color: var(--text-tertiary-color-light);
-    }
+  .logo {
+    color: var(--text-tertiary-color-light);
+  }
 
-    .logo:hover {
-        color: var(--text-secondary-color-light);
-    }
+  .logo:hover {
+    color: var(--text-secondary-color-light);
+  }
 
-    .logo:active {
-        color: var(--text-primary-color-light);
-    }
+  .logo:active {
+    color: var(--text-primary-color-light);
+  }
 
-    .navLink {
-        color: var(--text-tertiary-color-light);
-    }
+  .navLink {
+    color: var(--text-tertiary-color-light);
+  }
 
-    .navLink:hover {
-        color: var(--text-secondary-color-light);
-    }
+  .navLink:hover {
+    color: var(--text-secondary-color-light);
+  }
 
-    .navLink:active {
-        color: var(--text-primary-color-light);
-    }
+  .navLink:active {
+    color: var(--text-primary-color-light);
+  }
 
-    .navLinkActive {
-        color: var(--text-primary-color-light);
-    }
+  .navLinkActive {
+    color: var(--text-primary-color-light);
+  }
 }

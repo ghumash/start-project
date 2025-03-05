@@ -1,11 +1,11 @@
 .title {
-    margin-bottom: 2rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid var(--bg-primary-color-dark);
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--bg-primary-color-dark);
 }
 
 @media (prefers-color-scheme: dark) {
-    .title {
-        border-bottom: 1px solid var(--bg-primary-color-light);
-    }
+  .title {
+    border-bottom: 1px solid var(--bg-primary-color-light);
+  }
 }

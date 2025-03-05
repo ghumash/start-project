@@ -1,4 +1,12 @@
-import { HomePage, AboutPage, PostsPage, SinglePostPage, CounterPage, WeatherPage, NotFoundPage } from '@/pages'
+import {
+  HomePage,
+  AboutPage,
+  PostsPage,
+  SinglePostPage,
+  CounterPage,
+  WeatherPage,
+  NotFoundPage,
+} from '@/pages'
 
 export const routes = [
   {

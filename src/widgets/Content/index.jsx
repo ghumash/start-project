@@ -7,10 +7,14 @@ import { Loader } from '@/shared/ui'
 export const Content = () => {
   return (
     <main className={styles.content}>
-      <Suspense fallback={<Loader type='fullPage' size='large' />}>
+      <Suspense fallback={<Loader type="fullPage" size="large" />}>
         <Routes>
           {routes.map((route) => (
-            <Route key={route.path} path={route.path} element={<route.component />} />
+            <Route
+              key={route.path}
+              path={route.path}
+              element={<route.component />}
+            />
           ))}
         </Routes>
       </Suspense>

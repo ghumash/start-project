@@ -1,30 +1,29 @@
 .title {
-    margin-bottom: 2rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid var(--bg-primary-color-dark);
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--bg-primary-color-dark);
 }
 
 .listGroup {
-    padding: 1rem;
+  padding: 1rem;
 
-    border: 1px solid var(--bg-primary-color-dark);
+  border: 1px solid var(--bg-primary-color-dark);
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    padding-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
 @media (prefers-color-scheme: dark) {
-    .title {
-        border-bottom: 1px solid var(--bg-primary-color-light);
-    }
+  .title {
+    border-bottom: 1px solid var(--bg-primary-color-light);
+  }
 
-    .listGroup {
-        border: 1px solid var(--bg-primary-color-light);
-    }
+  .listGroup {
+    border: 1px solid var(--bg-primary-color-light);
+  }
 }
-

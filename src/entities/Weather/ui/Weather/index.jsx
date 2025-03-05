@@ -2,7 +2,8 @@ import styles from './style.module.css'
 import {
   DailyWeatherForecast,
   HourlyWeatherForecast,
-  SearchWeather, useWeather,
+  SearchWeather,
+  useWeather,
   WeatherDetails,
 } from '@/entities/Weather'
 
@@ -21,7 +22,7 @@ export const Weather = () => {
     toggleUnits,
     formatTime,
     handleClickDay,
-    onSubmit
+    onSubmit,
   } = useWeather()
 
   return (

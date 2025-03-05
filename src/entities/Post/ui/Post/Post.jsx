@@ -21,12 +21,8 @@ export const Post = (props) => {
         {post.id}. <Link to={`/posts/${post.id}`}>{post.title}</Link>
       </span>
       <div className={styles.buttonGroup}>
-        <Button onClick={handleUpdate}>
-          Update
-        </Button>
-        <Button onClick={handleRemove}>
-          Delete
-        </Button>
+        <Button onClick={handleUpdate}>Update</Button>
+        <Button onClick={handleRemove}>Delete</Button>
       </div>
     </div>
   )

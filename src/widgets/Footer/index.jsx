@@ -5,7 +5,9 @@ export const Footer = () => {
     <footer className={styles.footer}>
       <ul className={styles.socialLinks}>
         <li>
-          <a href="https://github.com/ghumash" target="_blank">GitHub</a>
+          <a href="https://github.com/ghumash" target="_blank">
+            GitHub
+          </a>
         </li>
       </ul>
     </footer>

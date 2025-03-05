@@ -6,4 +6,12 @@ import { CounterPage } from './CounterPage/CounterPage.async'
 import { WeatherPage } from './WeatherPage/WeatherPage.async'
 import { NotFoundPage } from './NotFoundPage/NotFoundPage.async'
 
-export { HomePage, AboutPage, PostsPage, SinglePostPage, CounterPage, WeatherPage, NotFoundPage }
+export {
+  HomePage,
+  AboutPage,
+  PostsPage,
+  SinglePostPage,
+  CounterPage,
+  WeatherPage,
+  NotFoundPage,
+}

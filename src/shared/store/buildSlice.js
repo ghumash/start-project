@@ -7,7 +7,10 @@ export function buildSlice(options) {
 
   const useActions = () => {
     const dispatch = useDispatch()
-    return useMemo(() => bindActionCreators(slice.actions, dispatch), [dispatch])
+    return useMemo(
+      () => bindActionCreators(slice.actions, dispatch),
+      [dispatch],
+    )
   }
 
   return {
