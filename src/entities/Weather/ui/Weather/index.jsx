@@ -56,6 +56,7 @@ export const Weather = () => {
         formatTime={formatTime}
         handleClickDay={handleClickDay}
         isLoading={isLoading}
+        currentDay={currentDay}
       />
     </div>
   )

@@ -19,7 +19,7 @@
     &:hover {
         background: var(--bg-secondary-color-dark);
         color: var(--text-secondary-color-light);
-        box-shadow: 0 0 .2rem var(--bg-secondary-color-dark);
+        box-shadow: 0 0 .2rem var(--bg-tertiary-color-dark);
     }
 
     &:active, &:focus {
@@ -31,6 +31,7 @@
     &:disabled {
         opacity: 0.5;
         cursor: not-allowed;
+
         &:hover, &:active {
             color: var(--text-tertiary-color-dark);
             background: var(--bg-secondary-color-light);
@@ -45,7 +46,7 @@
         &:hover {
             background: var(--bg-secondary-color-light);
             color: var(--text-secondary-color-dark);
-            box-shadow: 0 0 .2rem var(--bg-secondary-color-light);
+            box-shadow: 0 0 .2rem var(--bg-tertiary-color-light);
         }
 
         &:active, &:focus {

@@ -1,8 +1,7 @@
 import styles from './style.module.css'
 import clsx from 'clsx'
 
-export const DailyWeatherForecast = ({ units, forecastData, formatTime, handleClickDay, isLoading }) => {
-
+export const DailyWeatherForecast = ({ units, forecastData, formatTime, handleClickDay, isLoading, currentDay }) => {
   const fiveDays = forecastData?.list?.filter(
     (i) => new Date(i.dt_txt)?.getHours() === new Date(forecastData?.list[0]?.dt_txt)?.getHours(),
   )
@@ -25,8 +24,10 @@ export const DailyWeatherForecast = ({ units, forecastData, formatTime, handleCl
           0: 'Sunday',
         }
 
+        const activeDay = day?.dt === currentDay?.dt ? 'activeDay' : ''
+
         return (
-          <div key={i} className={clsx(styles.daily, styles[`div${i + 8}`])} onClick={() => handleClickDay(day)}>
+          <div key={i} className={clsx(styles.daily, styles[`div${i + 8}`], styles[activeDay])} onClick={() => handleClickDay(day)}>
             <p>
               {weekDays[weekDay]} {time}
             </p>
