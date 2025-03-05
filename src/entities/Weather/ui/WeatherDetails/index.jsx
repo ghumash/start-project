@@ -40,7 +40,7 @@ export const WeatherDetails = ({ units, currentDay, searchData, isLoading, toggl
             ))}
         </div>
 
-        <Button className={styles.toggle} onClick={toggleUnits}>
+        <Button className={styles.toggle} onClick={toggleUnits} disabled={isLoading}>
           Switch to {unitSymbol === 'C' ? 'Fahrenheit' : 'Celsius'}
         </Button>
       </div>
