@@ -1,4 +1,4 @@
-import { HomePage, AboutPage, PostsPage, SinglePostPage, NotFoundPage, CounterPage } from '@/pages'
+import { HomePage, AboutPage, PostsPage, SinglePostPage, CounterPage, WeatherPage, NotFoundPage } from '@/pages'
 
 export const routes = [
   {
@@ -12,6 +12,12 @@ export const routes = [
     path: '/about',
     component: AboutPage,
     label: 'About',
+    showInMenu: true,
+  },
+  {
+    path: '/weather',
+    component: WeatherPage,
+    label: 'Weather',
     showInMenu: true,
   },
   {

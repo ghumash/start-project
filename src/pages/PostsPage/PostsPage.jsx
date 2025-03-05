@@ -1,21 +1,26 @@
-import { memo } from 'react'
-import { Post, postAPI } from '@/entities/Post'
+import {
+  Post,
+  useCreatePostMutation,
+  useDeletePostMutation,
+  useFetchAllPostsQuery,
+  useUpdatePostMutation,
+} from '@/entities/Post'
+
 import { Button } from '@/shared/ui'
 import styles from './style.module.css'
 
-const PostsPage = memo(() => {
-  const { isError, isLoading, data: posts } = postAPI.useFetchAllPostsQuery(100)
-  const [createPost] = postAPI.useCreatePostMutation()
-  const [updatePost] = postAPI.useUpdatePostMutation()
-  const [deletePost] = postAPI.useDeletePostMutation()
+const PostsPage = () => {
+  const { isError, isLoading, data: posts } = useFetchAllPostsQuery(100)
+  const [createPost] = useCreatePostMutation()
+  const [updatePost] = useUpdatePostMutation()
+  const [deletePost] = useDeletePostMutation()
 
-  const handleCreate = async () => {
+  const handleCreate = () => {
     const title = prompt('Type post title')
-    if (title) await createPost({ title, body: title })
+    if (title) createPost({ title, body: title })
   }
 
   const handleUpdate = (post) => {
-    console.log(post)
     updatePost(post)
   }
 
@@ -42,9 +47,8 @@ const PostsPage = memo(() => {
           ))}
         </div>
       </div>
-
     </div>
   )
-})
+}
 
 export default PostsPage

@@ -19,12 +19,13 @@
     &:hover {
         background: var(--bg-secondary-color-dark);
         color: var(--text-secondary-color-light);
-        box-shadow: 0 0 .4rem var(--bg-secondary-color-dark);
+        box-shadow: 0 0 .2rem var(--bg-secondary-color-dark);
     }
 
-    &:active {
+    &:active, &:focus {
         background: var(--bg-primary-color-dark);
         color: var(--text-primary-color-light);
+        outline: none;
     }
 
     &:disabled {
@@ -44,10 +45,10 @@
         &:hover {
             background: var(--bg-secondary-color-light);
             color: var(--text-secondary-color-dark);
-            box-shadow: 0 0 .4rem var(--bg-secondary-color-light);
+            box-shadow: 0 0 .2rem var(--bg-secondary-color-light);
         }
 
-        &:active {
+        &:active, &:focus {
             background: var(--bg-primary-color-light);
             color: var(--text-primary-color-dark);
         }

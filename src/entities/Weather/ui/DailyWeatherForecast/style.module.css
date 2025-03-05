@@ -1,0 +1,39 @@
+.daily {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid var(--bg-primary-color-dark);
+}
+
+@media (prefers-color-scheme: dark) {
+  .daily {
+    border: 1px solid var(--bg-primary-color-light);
+  }
+}
+
+/* Grid */
+
+.div8 {
+  grid-row-start: 7;
+}
+
+.div9 {
+  grid-row-start: 7;
+}
+
+.div10 {
+  grid-row-start: 7;
+}
+
+.div11 {
+  grid-row-start: 7;
+}
+
+.div12 {
+  grid-row-start: 7;
+}
+
+
+

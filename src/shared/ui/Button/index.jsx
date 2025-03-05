@@ -3,6 +3,7 @@ import styles from './style.module.css'
 import { Loader } from '@/shared/ui'
 
 export const Button = ({ isLoading = false, disabled = false, children, className, ...props }) => {
+
   return (
     <button
       className={clsx(styles.button, className)}

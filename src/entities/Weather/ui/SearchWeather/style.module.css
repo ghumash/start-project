@@ -1,0 +1,24 @@
+.search {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+
+  width: 100%;
+}
+
+.error {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ff4d4d;
+}
+
+/* Grid */
+
+.div1 {
+  grid-column: span 5 / span 5;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+
+  width: 100%;
+}

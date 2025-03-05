@@ -1,9 +1,8 @@
 import { Button } from '@/shared/ui'
-import { memo } from 'react'
 import { useCounterActions } from '../models/slice/counterSlice'
 import { useSelector } from 'react-redux'
 
-export const Counter = memo(() => {
+export const Counter = () => {
   const value = useSelector((state) => state.counter.value)
   const { decrement, increment, add } = useCounterActions()
 
@@ -29,4 +28,4 @@ export const Counter = memo(() => {
       <h2>{value}</h2>
     </>
   )
-})
+}

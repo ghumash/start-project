@@ -1,9 +1,9 @@
 import { useParams } from 'react-router-dom'
-import { postAPI } from '@/entities/Post'
+import { useFetchSinglePostQuery } from '@/entities/Post'
 
 const SinglePostPage = () => {
   const { id } = useParams()
-  const { data: post } = postAPI.useFetchSinglePostQuery(id)
+  const { data: post } = useFetchSinglePostQuery(id)
 
   return <div>Title: {post?.title}</div>
 }
