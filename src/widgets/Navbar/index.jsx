@@ -6,7 +6,7 @@ export const Navbar = () => {
   const location = useLocation()
 
   return (
-    <nav className={styles.navbar}>
+    <nav className={styles.navbar} id="toTop">
       <div className={styles.logo}>
         <Link to="/">App</Link>
       </div>
