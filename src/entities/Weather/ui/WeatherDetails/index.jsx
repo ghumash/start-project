@@ -18,7 +18,7 @@ export const WeatherDetails = ({ units, currentDay, searchData, isLoading, toggl
         <p className={styles.description}>{weather[0].description}</p>
 
         <div className={styles.details}>
-          <img src={`https://openweathermap.org/img/wn/${weather[0].icon}@2x.png`} alt={weather[0].description} />
+          <img src={`https://openweathermap.org/img/wn/${weather[0].icon}@2x.png`} alt="" />
           <p className={styles.temp}>
             {temp}°{unitSymbol}
           </p>

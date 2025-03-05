@@ -15,12 +15,11 @@ export const HourlyWeatherForecast = ({ units, currentDay, forecastData, formatT
 
     return (
       <div key={i} className={clsx(styles.hourly, styles[`div${i + 3}`])}>
-        <p>{time}</p>
-        <p>
-          <b>
-            {temp}°{unitSymbol}
-          </b>
-        </p>
+        <div className={styles.time}>{time}</div>
+        <div className={styles.temp}>{temp}°{unitSymbol}</div>
+        <div>
+          <img src={`https://openweathermap.org/img/wn/${hour.weather[0].icon}@2x.png`} alt="" />
+        </div>
       </div>
     )
   })

@@ -1,10 +1,15 @@
 .hourly {
-  display: inline-flex;
-  flex-direction: column;
+  display: flex;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
 
   border: 1px solid var(--bg-primary-color-dark);
+}
+
+.temp {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 @media (prefers-color-scheme: dark) {

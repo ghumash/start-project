@@ -1,8 +1,11 @@
 .daily {
-  display: inline-flex;
-  flex-direction: column;
+  display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
+  gap: 1rem;
+
+  padding: 1rem 0;
 
   border: 1px solid var(--bg-primary-color-dark);
 
@@ -13,6 +16,11 @@
     background: var(--bg-secondary-color-light);
     box-shadow: 0 0 .2rem var(--bg-tertiary-color-light);
   }
+}
+
+.temp {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .activeDay {
