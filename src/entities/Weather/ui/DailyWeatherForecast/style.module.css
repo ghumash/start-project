@@ -5,7 +5,8 @@
   align-items: center;
   gap: 1rem;
 
-  padding: 1rem 0;
+  padding: 1rem;
+  text-align: center;
 
   border: 1px solid var(--bg-primary-color-dark);
 
@@ -53,6 +54,7 @@
 /* Grid */
 
 .div8 {
+  grid-template-rows: repeat(6, 80px);
   grid-row-start: 7;
 }
 

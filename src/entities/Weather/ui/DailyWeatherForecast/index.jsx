@@ -35,6 +35,8 @@ export const DailyWeatherForecast = ({
 
         const activeDay = day?.dt === currentDay?.dt ? 'activeDay' : ''
 
+      console.log(currentDay)
+
         return (
           <div
             key={i}
